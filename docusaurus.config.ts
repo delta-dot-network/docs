@@ -10,15 +10,15 @@ const config: Config = {
   favicon: 'img/delta-symbol-black.svg',
 
   // Set the production url of your site here
-  url: 'https://delta.network',
+  url: 'https://delta-dot-network.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/delta-docs-1/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'repyh-labs', // Usually your GitHub org/user name.
-  projectName: 'repyh', // Usually your repo name.
+  organizationName: 'delta-dot-network', // Usually your GitHub org/user name.
+  projectName: 'delta-docs-1', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
