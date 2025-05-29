@@ -66,12 +66,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'delta Network',
       logo: {
         alt: 'delta Network Logo',
-        src: 'img/delta-symbol-black.svg',
+        src: '/img/delta-symbol-black.svg',
       },
       items: [
         {
