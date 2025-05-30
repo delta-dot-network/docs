@@ -9,13 +9,13 @@ sidebar_position: 4
 
 
  The Executor is responsible for processing transactions and communicating them to the delta Base Layer. It is part of the domain and comprised of:
- - Domain RPC Server
+ - **Domain RPC Server** <br></br>
     Every domain requires a custom RPC server for user transactions and operations occurring on the domain to be communicated to the Runtime and eventually delta’s Base Layer. 
     The domain RPC server is not included in the executor template and must be set up separately (we recommend using a Rust framework like [Actix](https://actix.rs/docs/server/), [Axum](http://crates.io/crates/axum-connect), [Rouille](https://github.com/tomaka/rouille)).
- - Sequencer
+ - **Sequencer** <br></br>
     Domains on delta are free to use any sequencer they prefer. User transactions and operations on the domain must be ordered in some way before being passed to the Runtime.
     The delta Executor SDK includes a simple “first in, first out” sequencer as a default which can be used for simple implementations.
- - Runtime
+ - **Runtime** <br></br>
     The runtime manages the execution, packaging, and communication of user transactions. 
     The Executor SDK includes the default repyh runtime, which consists of a basic execution trait (customizable), SP1 proving trait (customizable), code to transform processed user transactions into SDLs, and a RPC client to connect to the gRPC on the base layer. It is recommended that teams use the repyh runtime and optionally customize the execution and proving traits to suit their needs (more detail below).
 
