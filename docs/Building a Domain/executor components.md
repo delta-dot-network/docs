@@ -41,5 +41,5 @@ sidebar_position: 4
         - Domain developers can define their own `Proving` trait if they prefer to use a different prover setup.
 </details>
 
-![detailed domain-centric view of the delta network](/img/domain_components_detailed.png)
+![detailed domain-centric view of the delta network](/img/domain_executor_detailed_view.png)
  

@@ -14,4 +14,4 @@ Domains are incredibly flexible - delta only impacts the settlement process when
 4. The domain code decides when to settle all local changes to delta: signed user transactions, the aggregated changes, and other context is used to create a SP1 proof. The state difference list and proof are sent to delta via the domain’s chosen validator, which will start the consensus process immediately (no global ordering of SDLs to slow you down).
 5. delta updates the global asset cloud.
 
-![domain workflow diagram](/img/delta_workflow.png)
+![domain workflow diagram](/img/domain_workflows.png)

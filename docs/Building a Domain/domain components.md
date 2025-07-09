@@ -15,8 +15,8 @@ To build a domain on delta, there are three main elements of the system you’ll
 &nbsp;
 
 **Simplified view of a domain's main components**
-![simplified view of a domain and delta](/img/domain_components_simple.png)
+![simplified view of a domain and delta](/img/delta_domains_simplified_view.png)
 
 **Domain-centric view of the delta Network**
-![domain-centric view of the delta Network](/img/delta_ecosystem_view.png)
+![domain-centric view of the delta Network](/img/delta_ecosystem_domain_view.png)
 
