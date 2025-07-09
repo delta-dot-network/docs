@@ -11,7 +11,7 @@ If you’re building a domain from scratch, the delta SDK provides some basic bu
 - **End-user operations:** token transfers, token mints and vault creation
 - **Communication with the base layer:** balance queries, account queries
 
-If you don't want to use Rust, we also have a simplified **typescript API** to access the most common operations: fetching vault data, minting new tokens, and debiting vaults. 
+If you don't want to use Rust, we can provide **APIs compatible with other languages** (e.g. TypeScript) to access the most common operations: fetching vault data, minting new tokens, and debiting vaults. 
 In the future, language support will expand beyond Rust to allow developers in different languages to work with the delta SDK directly.
 
-delta is designed to be beautifully simple and allow domains to be maximally expressive. Beyond these simple SDK components, *domain designers are free to build whatever and however they want.*
+delta integrations are designed to be beautifully simple, in order to allow domains to be maximally expressive. Beyond these simple SDK components, *domain designers are free to build whatever and however they want.*
