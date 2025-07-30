@@ -1,10 +1,24 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* spacing */
+.markdown p {
+  margin-bottom: 0.25rem;
+  margin-top: 0.75rem;
+}
+h1 + ul, h1 + ol,
+h2 + ul, h2 + ol,
+h3 + ul, h3 + ol,
+h4 + ul, h4 + ol,
+h5 + ul, h5 + ol,
+h6 + ul, h6 + ol {
+  margin-top: 0.25rem; /* Reduced from default ~0.5rem or more */
+}
 
-/* You can override the default Infima variables here. */
+/* Also reduce the bottom margin on headings before lists */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.25rem; /* Reduced from default ~1rem */
+}
+
+
+/* light mode color settings */
 :root {
   --ifm-color-primary: #28536B;
   --ifm-color-primary-dark: #24495f;
@@ -16,15 +30,15 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
-  /* Enhanced light mode colors */
+  /* light mode color settings */
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #f8f9fa;
   --ifm-hover-overlay: rgba(40, 83, 107, 0.05);
 }
 
-/* Proper dark mode with better contrast and readability */
+/* dark mode color settings */
 [data-theme='dark'] {
-  /* Primary colors - darker, more muted versions */
+  /* Primary colors */
   --ifm-color-primary: #4a9eff;
   --ifm-color-primary-dark: #2e8cff;
   --ifm-color-primary-darker: #1a82ff;
@@ -78,7 +92,7 @@
   --ifm-color-danger-contrast-background: #331a1a;
 }
 
-/* Dark mode improvements for specific elements */
+/* dark mode color settings for homepage */
 [data-theme='dark'] .hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
 }
@@ -91,17 +105,14 @@
   color: #b0b0b0 !important;
 }
 
-/* Fix for hero description text */
 [data-theme='dark'] .hero p {
   color: #b0b0b0 !important;
 }
 
-/* Fix for any text in hero section */
 [data-theme='dark'] .hero * {
   color: inherit;
 }
 
-/* Dark mode card improvements */
 [data-theme='dark'] .card {
   background-color: var(--ifm-card-background-color);
   border-color: var(--ifm-color-emphasis-200);
@@ -112,7 +123,6 @@
   box-shadow: 0 4px 12px rgba(74, 158, 255, 0.15);
 }
 
-/* Dark mode button improvements */
 [data-theme='dark'] .button--secondary {
   background-color: var(--ifm-color-primary);
   border-color: var(--ifm-color-primary);
@@ -130,7 +140,6 @@
   color: #ffffff;
 }
 
-/* Dark mode improvements for tables */
 [data-theme='dark'] .table-of-contents {
   border-color: var(--ifm-color-emphasis-200);
 }
@@ -143,7 +152,6 @@
   color: var(--ifm-color-primary);
 }
 
-/* Dark mode improvements for pagination */
 [data-theme='dark'] .pagination-nav__link {
   border-color: var(--ifm-color-emphasis-200);
   background-color: var(--ifm-background-surface-color);
@@ -154,19 +162,16 @@
   background-color: var(--ifm-card-background-color);
 }
 
-/* Dark mode improvements for search */
 [data-theme='dark'] .DocSearch-Button {
   background-color: var(--ifm-background-surface-color);
   border-color: var(--ifm-color-emphasis-200);
 }
 
-/* Dark mode improvements for admonitions */
 [data-theme='dark'] .admonition {
   background-color: var(--ifm-background-surface-color);
   border-color: var(--ifm-color-emphasis-300);
 }
 
-/* Dark mode improvements for code blocks */
 [data-theme='dark'] .prism-code {
   background-color: #1e1e1e !important;
 }
@@ -183,21 +188,17 @@
   color: #7c7c7c;
 }
 
-/* Responsive improvements */
 @media (max-width: 768px) {
   [data-theme='dark'] .hero {
     background: #1a1a1a;
   }
 }
 
-/* Additional dark mode fixes for landing page components */
 
-/* Fix quickLinks section background */
 [data-theme='dark'] .quickLinks {
   background-color: #2e2e2e !important; /* Lighter than the default surface color */
 }
 
-/* Ensure all text in quickLinks is visible */
 [data-theme='dark'] .quickLinks h2 {
   color: #ffffff !important;
 }
@@ -210,7 +211,6 @@
   color: #ffffff !important;
 }
 
-/* Fix features section if it exists */
 [data-theme='dark'] .features {
   background-color: #333333 !important;
 }
@@ -223,7 +223,6 @@
   color: #b0b0b0 !important;
 }
 
-/* Fix any remaining hero text issues */
 [data-theme='dark'] .hero .heroDescription {
   color: #b0b0b0 !important;
 }
@@ -232,7 +231,6 @@
   color: #b0b0b0 !important;
 }
 
-/* Ensure heading components have proper colors */
 [data-theme='dark'] h1, 
 [data-theme='dark'] h2, 
 [data-theme='dark'] h3, 
@@ -242,7 +240,6 @@
   color: #ffffff !important;
 }
 
-/* Fix any stubborn paragraph text */
 [data-theme='dark'] .container p {
   color: #b0b0b0 !important;
 }

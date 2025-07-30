@@ -11,7 +11,7 @@ delta is a new distributed system that lets you launch **independent execution e
 ### The delta Network exists in two layers
 1. **Domains:** Independent environments that handle end-user experience, transaction execution and ordering - *but not the assets themselves*.
     - Users transact within domains, which process state changes locally.
-    - Domains submit State Diff Lists (SDLs) to validators, which include proofs of minimal global laws (e.g. debit messages were signed by a valid private key, a vault did not spend more than its balance).
+    - Domains submit State Diff Lists (SDLs) to validators to update the balance records stored there, along with proofs of minimal global laws (e.g. debit messages were signed by a valid private key, a vault did not spend more than its balance) to ensure all updates are valid.
     - Domains can optionally add proofs of additional execution (e.g. order-matching logic) or domain-specific custom local laws.
 
 2. **Base Layer:** Validators maintaining a globally consistent state of accounts and assets. Vaults and tokens live on the base layer, and can only be affected by zk-proven, valid SDLs.

@@ -63,7 +63,7 @@ Rules that are imposed by a domain and apply to user-level transactions which oc
 
 The minimal denomination for fungible tokens on the delta network.
 
-### Executor Lease Agreement (ELA)
+### Executor Lease Agreement (ELA) {#ela}
 
 A record stored at the base layer which identifies a domain along with the domain's executor and owned shard.
 
