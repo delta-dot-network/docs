@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'delta Network docs',
+  title: 'delta Network',
   tagline: '',
   favicon: 'img/delta-symbol-black.svg',
 
@@ -37,26 +37,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: null,
         },
-        /*
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl: null,
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        */
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -71,6 +54,7 @@ const config: Config = {
       logo: {
         alt: 'delta Network Logo',
         src: '/img/delta-symbol-black.svg',
+        srcDark: '/img/delta-symbol-white.svg',
       },
       items: [
         {
@@ -91,11 +75,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Website',
           items: [
             {
-              label: 'Docs',
-              to: '/docs/docs/frontpage',
+              label: 'delta.Network',
+              to: 'https://delta.network/',
             },
           ],
         },

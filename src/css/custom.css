@@ -7,24 +7,242 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #28536B;
-  --ifm-color-primary-dark: #28536B;
-  --ifm-color-primary-darker: #0c2b3b;
-  --ifm-color-primary-darkest: #0a1921;
-  --ifm-color-primary-light: #336e8d;
-  --ifm-color-primary-lighter: #3b7a9c;
-  --ifm-color-primary-lightest: #4796c1;
+  --ifm-color-primary-dark: #24495f;
+  --ifm-color-primary-darker: #22455a;
+  --ifm-color-primary-darkest: #1c394a;
+  --ifm-color-primary-light: #2c5d77;
+  --ifm-color-primary-lighter: #2e617c;
+  --ifm-color-primary-lightest: #336e88;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Enhanced light mode colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+  --ifm-hover-overlay: rgba(40, 83, 107, 0.05);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Proper dark mode with better contrast and readability */
 [data-theme='dark'] {
-  --ifm-color-primary: #b4ebeb;
-  --ifm-color-primary-dark: #9dcbcb;
-  --ifm-color-primary-darker: #83b1b1;
-  --ifm-color-primary-darkest: #7fa9a9;
-  --ifm-color-primary-light: #b4ebeb;
-  --ifm-color-primary-lighter: #ccfcfc;
-  --ifm-color-primary-lightest: #d1ffff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary colors - darker, more muted versions */
+  --ifm-color-primary: #4a9eff;
+  --ifm-color-primary-dark: #2e8cff;
+  --ifm-color-primary-darker: #1a82ff;
+  --ifm-color-primary-darkest: #0066ff;
+  --ifm-color-primary-light: #66b0ff;
+  --ifm-color-primary-lighter: #7ab8ff;
+  --ifm-color-primary-lightest: #99c7ff;
+  
+  /* Background colors */
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #2e2e2e; /* Lighter for better contrast */
+  
+  /* Text colors */
+  --ifm-font-color-base: #e3e3e3;
+  --ifm-font-color-secondary: #b0b0b0;
+  
+  /* Border and separator colors */
+  --ifm-color-emphasis-100: #2d2d2d;
+  --ifm-color-emphasis-200: #404040;
+  --ifm-color-emphasis-300: #525252;
+  --ifm-color-emphasis-400: #666666;
+  
+  /* Card and surface colors */
+  --ifm-card-background-color: #2a2a2a;
+  --ifm-hover-overlay: rgba(74, 158, 255, 0.1);
+  
+  /* Code block colors */
+  --ifm-code-background: #2d2d2d;
+  --docusaurus-highlighted-code-line-bg: rgba(74, 158, 255, 0.15);
+  
+  /* Navigation colors */
+  --ifm-navbar-background-color: #1e1e1e;
+  --ifm-navbar-link-color: #e3e3e3;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  
+  /* Footer colors */
+  --ifm-footer-background-color: #1a1a1a;
+  --ifm-footer-color: #b0b0b0;
+  --ifm-footer-link-color: #e3e3e3;
+  --ifm-footer-title-color: #ffffff;
+  
+  /* Sidebar colors */
+  --ifm-menu-color: #b0b0b0;
+  --ifm-menu-color-hover: #ffffff;
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  
+  /* Alert colors for dark mode */
+  --ifm-color-info-contrast-background: #1a2332;
+  --ifm-color-success-contrast-background: #1a2e1a;
+  --ifm-color-warning-contrast-background: #332e1a;
+  --ifm-color-danger-contrast-background: #331a1a;
+}
+
+/* Dark mode improvements for specific elements */
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+[data-theme='dark'] .hero__title {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: #b0b0b0 !important;
+}
+
+/* Fix for hero description text */
+[data-theme='dark'] .hero p {
+  color: #b0b0b0 !important;
+}
+
+/* Fix for any text in hero section */
+[data-theme='dark'] .hero * {
+  color: inherit;
+}
+
+/* Dark mode card improvements */
+[data-theme='dark'] .card {
+  background-color: var(--ifm-card-background-color);
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.15);
+}
+
+/* Dark mode button improvements */
+[data-theme='dark'] .button--secondary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+[data-theme='dark'] .button--outline.button--secondary {
+  background-color: transparent;
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .button--outline.button--secondary:hover {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+/* Dark mode improvements for tables */
+[data-theme='dark'] .table-of-contents {
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .table-of-contents__link {
+  color: var(--ifm-menu-color);
+}
+
+[data-theme='dark'] .table-of-contents__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Dark mode improvements for pagination */
+[data-theme='dark'] .pagination-nav__link {
+  border-color: var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-card-background-color);
+}
+
+/* Dark mode improvements for search */
+[data-theme='dark'] .DocSearch-Button {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+/* Dark mode improvements for admonitions */
+[data-theme='dark'] .admonition {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+/* Dark mode improvements for code blocks */
+[data-theme='dark'] .prism-code {
+  background-color: #1e1e1e !important;
+}
+
+[data-theme='dark'] .token.title {
+  color: #4a9eff;
+}
+
+[data-theme='dark'] .token.string {
+  color: #87d96c;
+}
+
+[data-theme='dark'] .token.comment {
+  color: #7c7c7c;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  [data-theme='dark'] .hero {
+    background: #1a1a1a;
+  }
+}
+
+/* Additional dark mode fixes for landing page components */
+
+/* Fix quickLinks section background */
+[data-theme='dark'] .quickLinks {
+  background-color: #2e2e2e !important; /* Lighter than the default surface color */
+}
+
+/* Ensure all text in quickLinks is visible */
+[data-theme='dark'] .quickLinks h2 {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .quickLinks p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme='dark'] .quickLinks h3 {
+  color: #ffffff !important;
+}
+
+/* Fix features section if it exists */
+[data-theme='dark'] .features {
+  background-color: #333333 !important;
+}
+
+[data-theme='dark'] .features h3 {
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .features p {
+  color: #b0b0b0 !important;
+}
+
+/* Fix any remaining hero text issues */
+[data-theme='dark'] .hero .heroDescription {
+  color: #b0b0b0 !important;
+}
+
+[data-theme='dark'] .hero .heroDescription p {
+  color: #b0b0b0 !important;
+}
+
+/* Ensure heading components have proper colors */
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3, 
+[data-theme='dark'] h4, 
+[data-theme='dark'] h5, 
+[data-theme='dark'] h6 {
+  color: #ffffff !important;
+}
+
+/* Fix any stubborn paragraph text */
+[data-theme='dark'] .container p {
+  color: #b0b0b0 !important;
 }

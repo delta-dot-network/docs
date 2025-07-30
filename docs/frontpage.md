@@ -16,12 +16,12 @@ delta is a new distributed system that lets you launch **independent execution e
 
 2. **Base Layer:** Validators maintaining a globally consistent state of accounts and assets. Vaults and tokens live on the base layer, and can only be affected by zk-proven, valid SDLs.
     - Validators use RISC-V proofs to independently verify SDLs for compliance with global and local laws.
-    - Verified SDLs are gossiped between validators, who update the global state without requiring block production or global ordering.
-    - Since assets never leave the base layer, interoperability between domains becomes a native transaction with no bridging required.
+    - Verified SDLs are gossiped between validators, who update the global state. Because of the spending constraints enforced in delta’s state model, all submitted SDLs can be processed by validators in parallel. Unlike legacy blockchains, delta does not produce blocks or require global total ordering.
+    - Since all assets are issued and stored on a single base layer, assets on delta can be transferred and used across any domain on the network (i.e. the base layer provides native interoperability, no bridging required).
     
 ### What does delta mean for domains?
 
-With delta, you gain the agility of modern web infrastructure combined with the security and trust of blockchain-grade settlement—empowering you to build, iterate, and scale next-generation financial products with unprecedented speed and confidence.
+With delta, you gain the agility of modern web infrastructure combined with the security and trust of blockchain-grade settlement, empowering you to build, iterate, and scale next-generation financial products with unprecedented speed and confidence.
 
 **Develop and Iterate at Web2 Speeds**
 - Delta removes the friction typically associated with blockchain development. You can build or integrate your delta with the environment of your choice using familiar programming languages, cloud services, and authentication frameworks. This lets your team innovate and deploy at the rapid pace of modern web applications, not bound by specialized blockchain expertise or long deployment cycles.
