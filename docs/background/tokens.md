@@ -6,7 +6,9 @@ sidebar_position: 2
 ---
 
 # Tokens on the delta Network
-
+:::info
+Coming soon: Information on **stablecoin issuers**, cross-chain compatibility
+:::
 ## Overview
 delta’s token design is simple with only two token standards: fungible, and non-fungible (NFTs). All assets on delta are represented by one of these two primitives.
 
@@ -62,6 +64,3 @@ let token_mint = fungible::Mint {
 };
 ```
 
-:::info
-Coming soon: Information on **stablecoin issuers**, cross-chain compatibility
-:::

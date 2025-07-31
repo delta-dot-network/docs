@@ -28,6 +28,6 @@ delta prioritizes intuitive, secure, and seamless user interactions:
 - Achieve frictionless interoperability, enabling users to interact with diverse applications and platforms across the delta ecosystem without complex bridging processes or wallet management.
 
 :::note
-For access to our domain example github repository to see how various use cases are designed in practice, please [contact us](mailto:helen@repyhlabs.com)
+For access to our domain example github repository to see how various use cases are designed in practice, please [request access to the SDK](/docs/docs/building/request-sdk-access)
 :::
 

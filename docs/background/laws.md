@@ -6,7 +6,9 @@ sidebar_position: 5
 ---
 
 # Laws and Proving on the delta Network
-
+:::info
+Coming soon: Declaring and enforcing **Token Laws**
+:::
 ## Overview
 "Laws" on delta describe the rules and logic limiting user transactions. There are three categories of laws on delta:
 
@@ -20,9 +22,7 @@ sidebar_position: 5
 
 **3. Token Laws**
 - Optionally defined by the token issuer, and applied to all transactions involving the token on every domain
-:::info
-Coming soon: Declaring and enforcing **Token Laws**
-:::
+
 
 ## Proving Workflow
 
@@ -81,7 +81,4 @@ pub fn main() {
 ```
 :::note
 Our team can help translate your required local laws into provable programs. Please [contact us](/docs/docs/building/request-sdk-access) for more details.
-:::
-:::info
-Coming Soon: Quick-start guide on declaring a local law, local law templates.
 :::
