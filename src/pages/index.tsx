@@ -10,18 +10,25 @@ import styles from './index.module.css';
 
 const quickLinks = [
   {
-    title: 'Introduction to delta',
+    title: 'Intro to delta',
     description: 'Learn the basics of the delta Network',
     to: '/docs/docs/frontpage',
-    icon: '🚀',
+    icon: '📚',
     type: 'link'
   },
   {
     title: 'Information for developers',
     description: 'Details on domain setup',
     to: '/docs/docs/building/delta-sdk',
-    icon: '📚',
+    icon: '🚀',
     type: 'link'
+  },
+  {
+    title: 'Protocol background',
+    description: 'Deep dive into the delta protocol',
+    to: '/docs/docs/background',
+    icon: '🌊',
+    type: 'link',
   },
   {
     title: 'delta for Regulated Finance',
@@ -78,9 +85,9 @@ function QuickLinksSection() {
           <Heading as="h2">delta: for Businesses and Builders</Heading>
           <p>Jump straight to what you need</p>
         </div> */}
-        <div className="row">
+        <div className="row" style={{ display: 'flex', alignItems: 'stretch' }}>
           {quickLinks.map((link, idx) => (
-            <div key={idx} className="col col--3">
+            <div key={idx} className="col" style={{ display: 'flex' }}>
               {link.type === 'download' ? (
                 // Download link with special attributes
                 <a
@@ -88,7 +95,8 @@ function QuickLinksSection() {
                   href={useBaseUrl(link.to)}
                   download={link.filename}
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div className="text--center">
                     <div className={styles.quickLinkIcon}>{link.icon}</div>
                     <Heading as="h3">{link.title}</Heading>
@@ -102,7 +110,8 @@ function QuickLinksSection() {
                   className={clsx('card padding--lg', styles.quickLinkCard, styles.externalCard)}
                   href={link.to}
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div className="text--center">
                     <div className={styles.quickLinkIcon}>{link.icon}</div>
                     <Heading as="h3">
@@ -117,7 +126,8 @@ function QuickLinksSection() {
                 // Regular internal link
                 <Link
                   className={clsx('card padding--lg', styles.quickLinkCard)}
-                  to={link.to}>
+                  to={link.to}
+                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div className="text--center">
                     <div className={styles.quickLinkIcon}>{link.icon}</div>
                     <Heading as="h3">{link.title}</Heading>
