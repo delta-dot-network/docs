@@ -10,11 +10,89 @@
   overflow: hidden;
 }
 
+.heroDescription {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
 }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureItem {
+  flex: 0 1 calc(33.333% - 1rem);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--ifm-card-primary-grey);
+  border-radius: var(--ifm-card-border-radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--ifm-global-shadow-lw);
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base) !important;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 255, 0.1);
+  border-color: rgba(0, 0, 255, 0.1);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.5rem;
+}
+
+.featureDescription {
+  flex-grow: 1;
+  margin-bottom: 0;
+  color: var(--ifm-font-color-base) !important;
+}
+
+.featureItem:hover .featureTitle,
+.featureItem:hover .featureDescription {
+  color: var(--ifm-font-color-base) !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .featureItem {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    padding: 1rem;
+  }
+
+  .featureItem {
+    flex: 0 1 100%;
+  }
+}
+
+
 
 .buttons {
   display: flex;

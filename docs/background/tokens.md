@@ -63,4 +63,3 @@ let token_mint = fungible::Mint {
     },
 };
 ```
-

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'delta Network',
+  title: 'delta Network Docs',
   tagline: '',
   favicon: 'img/delta-symbol-black.svg',
 
@@ -48,7 +48,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     navbar: {
       title: 'delta Network',
       logo: {

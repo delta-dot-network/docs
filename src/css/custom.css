@@ -1,24 +1,23 @@
-/* spacing */
+/* Spacing */
 .markdown p {
   margin-bottom: 0.25rem;
   margin-top: 0.75rem;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.25rem;
+}
+
 h1 + ul, h1 + ol,
 h2 + ul, h2 + ol,
 h3 + ul, h3 + ol,
 h4 + ul, h4 + ol,
 h5 + ul, h5 + ol,
 h6 + ul, h6 + ol {
-  margin-top: 0.25rem; /* Reduced from default ~0.5rem or more */
+  margin-top: 0.25rem;
 }
 
-/* Also reduce the bottom margin on headings before lists */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.25rem; /* Reduced from default ~1rem */
-}
-
-
-/* light mode color settings */
+/* Light mode */
 :root {
   --ifm-color-primary: #28536B;
   --ifm-color-primary-dark: #24495f;
@@ -29,217 +28,88 @@ h1, h2, h3, h4, h5, h6 {
   --ifm-color-primary-lightest: #336e88;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  
-  /* light mode color settings */
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #f8f9fa;
   --ifm-hover-overlay: rgba(40, 83, 107, 0.05);
 }
 
-/* dark mode color settings */
+/* Dark mode */
 [data-theme='dark'] {
-  /* Primary colors */
-  --ifm-color-primary: #4a9eff;
-  --ifm-color-primary-dark: #2e8cff;
-  --ifm-color-primary-darker: #1a82ff;
-  --ifm-color-primary-darkest: #0066ff;
-  --ifm-color-primary-light: #66b0ff;
-  --ifm-color-primary-lighter: #7ab8ff;
-  --ifm-color-primary-lightest: #99c7ff;
+  /* Primary colors - brighter for better contrast */
+  --ifm-color-primary: #60b0ff;
+  --ifm-color-primary-dark: #4aa3ff;
+  --ifm-color-primary-darker: #3d9aff;
+  --ifm-color-primary-darkest: #1a82ff;
+  --ifm-color-primary-light: #76bdff;
+  --ifm-color-primary-lighter: #8ac6ff;
+  --ifm-color-primary-lightest: #afd6ff;
   
-  /* Background colors */
-  --ifm-background-color: #1a1a1a;
-  --ifm-background-surface-color: #2e2e2e; /* Lighter for better contrast */
+  /* Background colors - better contrast between layers */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-card-background-color: #1c2128;
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-footer-background-color: #0d1117;
   
-  /* Text colors */
-  --ifm-font-color-base: #e3e3e3;
-  --ifm-font-color-secondary: #b0b0b0;
-  
-  /* Border and separator colors */
-  --ifm-color-emphasis-100: #2d2d2d;
-  --ifm-color-emphasis-200: #404040;
-  --ifm-color-emphasis-300: #525252;
-  --ifm-color-emphasis-400: #666666;
-  
-  /* Card and surface colors */
-  --ifm-card-background-color: #2a2a2a;
-  --ifm-hover-overlay: rgba(74, 158, 255, 0.1);
-  
-  /* Code block colors */
-  --ifm-code-background: #2d2d2d;
-  --docusaurus-highlighted-code-line-bg: rgba(74, 158, 255, 0.15);
-  
-  /* Navigation colors */
-  --ifm-navbar-background-color: #1e1e1e;
-  --ifm-navbar-link-color: #e3e3e3;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
-  
-  /* Footer colors */
-  --ifm-footer-background-color: #1a1a1a;
-  --ifm-footer-color: #b0b0b0;
-  --ifm-footer-link-color: #e3e3e3;
+  /* Text colors - much brighter for readability */
+  --ifm-font-color-base: #e6edf3;
+  --ifm-font-color-secondary: #8d96a0;
+  --ifm-footer-color: #8d96a0;
+  --ifm-footer-link-color: #e6edf3;
   --ifm-footer-title-color: #ffffff;
-  
-  /* Sidebar colors */
-  --ifm-menu-color: #b0b0b0;
-  --ifm-menu-color-hover: #ffffff;
+  --ifm-navbar-link-color: #e6edf3;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-menu-color: #8d96a0;
+  --ifm-menu-color-hover: #e6edf3;
   --ifm-menu-color-active: var(--ifm-color-primary);
   
-  /* Alert colors for dark mode */
-  --ifm-color-info-contrast-background: #1a2332;
-  --ifm-color-success-contrast-background: #1a2e1a;
-  --ifm-color-warning-contrast-background: #332e1a;
-  --ifm-color-danger-contrast-background: #331a1a;
+  /* Border colors */
+  --ifm-color-emphasis-100: #21262d;
+  --ifm-color-emphasis-200: #30363d;
+  --ifm-color-emphasis-300: #484f58;
+  --ifm-color-emphasis-400: #6e7681;
+  
+  /* Other */
+  --ifm-hover-overlay: rgba(96, 176, 255, 0.1);
+  --ifm-code-background: #161b22;
+  --docusaurus-highlighted-code-line-bg: rgba(96, 176, 255, 0.15);
+  
+  /* Alert backgrounds */
+  --ifm-color-info-contrast-background: #1c2d41;
+  --ifm-color-success-contrast-background: #1c3329;
+  --ifm-color-warning-contrast-background: #3d2e1c;
+  --ifm-color-danger-contrast-background: #3d1c1c;
 }
 
-/* dark mode color settings for homepage */
+/* Dark mode components */
 [data-theme='dark'] .hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
 }
 
-[data-theme='dark'] .hero__title {
-  color: #ffffff !important;
+[data-theme='dark'] .quickLinks {
+  background-color: #161b22;
 }
 
-[data-theme='dark'] .hero__subtitle {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] .hero p {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] .hero * {
-  color: inherit;
+[data-theme='dark'] .features {
+  background-color: #1c2128;
 }
 
 [data-theme='dark'] .card {
   background-color: var(--ifm-card-background-color);
-  border-color: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 [data-theme='dark'] .card:hover {
   border-color: var(--ifm-color-primary);
-  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.15);
-}
-
-[data-theme='dark'] .button--secondary {
-  background-color: var(--ifm-color-primary);
-  border-color: var(--ifm-color-primary);
-  color: #ffffff;
-}
-
-[data-theme='dark'] .button--outline.button--secondary {
-  background-color: transparent;
-  border-color: var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
-}
-
-[data-theme='dark'] .button--outline.button--secondary:hover {
-  background-color: var(--ifm-color-primary);
-  color: #ffffff;
-}
-
-[data-theme='dark'] .table-of-contents {
-  border-color: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .table-of-contents__link {
-  color: var(--ifm-menu-color);
-}
-
-[data-theme='dark'] .table-of-contents__link:hover {
-  color: var(--ifm-color-primary);
-}
-
-[data-theme='dark'] .pagination-nav__link {
-  border-color: var(--ifm-color-emphasis-200);
-  background-color: var(--ifm-background-surface-color);
-}
-
-[data-theme='dark'] .pagination-nav__link:hover {
-  border-color: var(--ifm-color-primary);
-  background-color: var(--ifm-card-background-color);
-}
-
-[data-theme='dark'] .DocSearch-Button {
-  background-color: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .admonition {
-  background-color: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-300);
+  box-shadow: 0 4px 12px rgba(96, 176, 255, 0.2);
 }
 
 [data-theme='dark'] .prism-code {
-  background-color: #1e1e1e !important;
-}
-
-[data-theme='dark'] .token.title {
-  color: #4a9eff;
-}
-
-[data-theme='dark'] .token.string {
-  color: #87d96c;
-}
-
-[data-theme='dark'] .token.comment {
-  color: #7c7c7c;
+  background-color: #0d1117;
 }
 
 @media (max-width: 768px) {
   [data-theme='dark'] .hero {
-    background: #1a1a1a;
+    background: #0d1117;
   }
-}
-
-
-[data-theme='dark'] .quickLinks {
-  background-color: #2e2e2e !important; /* Lighter than the default surface color */
-}
-
-[data-theme='dark'] .quickLinks h2 {
-  color: #ffffff !important;
-}
-
-[data-theme='dark'] .quickLinks p {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] .quickLinks h3 {
-  color: #ffffff !important;
-}
-
-[data-theme='dark'] .features {
-  background-color: #333333 !important;
-}
-
-[data-theme='dark'] .features h3 {
-  color: #ffffff !important;
-}
-
-[data-theme='dark'] .features p {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] .hero .heroDescription {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] .hero .heroDescription p {
-  color: #b0b0b0 !important;
-}
-
-[data-theme='dark'] h1, 
-[data-theme='dark'] h2, 
-[data-theme='dark'] h3, 
-[data-theme='dark'] h4, 
-[data-theme='dark'] h5, 
-[data-theme='dark'] h6 {
-  color: #ffffff !important;
-}
-
-[data-theme='dark'] .container p {
-  color: #b0b0b0 !important;
 }

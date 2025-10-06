@@ -1,21 +1,15 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import styles from './index.module.css';
+import Link from '@docusaurus/Link';
+import clsx from 'clsx';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
 
-const quickLinks = [
-  {
-    title: 'Intro to delta',
-    description: 'Learn the basics of the delta Network',
-    to: '/docs/docs/frontpage',
-    icon: '📚',
-    type: 'link'
-  },
+
+const featuresList = [
   {
     title: 'Information for developers',
     description: 'Details on domain setup',
@@ -38,23 +32,15 @@ const quickLinks = [
     type: 'download',
     filename: 'delta_for_RTA.pdf'
   },
-  {
-  title: 'Ready to build?',
-  description: 'Request access to our SDK',
-  to: '/docs/docs/building/request-sdk-access',
-  icon: '👷‍♀️',
-  type: 'link'
-},
 ];
 
-function HomepageHeader() {
+function HeroSection() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          Welcome to the {siteConfig.title} docs
-        </Heading>
+        <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
 
         {/* hero blurb */}
@@ -77,68 +63,53 @@ function HomepageHeader() {
   );
 }
 
-function QuickLinksSection() {
+function FeaturesSection() {
   return (
-    <section className={styles.quickLinks}>
-      <div className="container">
-        {/* <div className="text--center">
-          <Heading as="h2">delta: for Businesses and Builders</Heading>
-          <p>Jump straight to what you need</p>
-        </div> */}
-        <div className="row" style={{ display: 'flex', alignItems: 'stretch' }}>
-          {quickLinks.map((link, idx) => (
-            <div key={idx} className="col" style={{ display: 'flex' }}>
-              {link.type === 'download' ? (
-                // Download link with special attributes
-                <a
-                  className={clsx('card padding--lg', styles.quickLinkCard, styles.downloadCard)}
-                  href={useBaseUrl(link.to)}
-                  download={link.filename}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div className="text--center">
-                    <div className={styles.quickLinkIcon}>{link.icon}</div>
-                    <Heading as="h3">{link.title}</Heading>
-                    <p>{link.description}</p>
-                    {/*<div className={styles.downloadBadge}>Download</div>*/}
-                  </div>
-                </a>
-              ) : link.type === 'external' ? (
-                // External link
-                <a
-                  className={clsx('card padding--lg', styles.quickLinkCard, styles.externalCard)}
-                  href={link.to}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div className="text--center">
-                    <div className={styles.quickLinkIcon}>{link.icon}</div>
-                    <Heading as="h3">
-                      {link.title}
-                      <span className={styles.externalIcon}> ↗</span>
-                    </Heading>
-                    <p>{link.description}</p>
-                    {/*<div className={styles.externalBadge}>External</div>*/}
-                  </div>
-                </a>
-              ): (
-                // Regular internal link
-                <Link
-                  className={clsx('card padding--lg', styles.quickLinkCard)}
-                  to={link.to}
-                  style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div className="text--center">
-                    <div className={styles.quickLinkIcon}>{link.icon}</div>
-                    <Heading as="h3">{link.title}</Heading>
-                    <p>{link.description}</p>
-                  </div>
-                </Link>
-              )}
+    <section className={styles.features}>
+      {featuresList.map((link, idx) => (
+          link.type === 'download' ? (
+            // Download link
+          <a
+            className={clsx('card padding--lg', styles.featureItem, styles.downloadCard)}
+            href={useBaseUrl(link.to)}
+            download={link.filename}
+            target="_blank"
+            rel="noopener noreferrer">
+            <div className="text--center">
+              <div className={styles.featureIcon}>{link.icon}</div>
+              <Heading as="h3">{link.title}</Heading>
+              <p>{link.description}</p>
             </div>
-          ))}
-        </div>
-      </div>
+          </a>
+        ) : link.type === 'external' ? (
+          // External link
+          <a
+            className={clsx('card padding--lg', styles.featureItem, styles.externalCard)}
+            href={link.to}
+            target="_blank"
+            rel="noopener noreferrer">
+            <div className="text--center">
+              <div className={styles.featureIcon}>{link.icon}</div>
+              <Heading as="h3">
+                {link.title}
+                <span className={styles.externalIcon}> ↗</span>
+              </Heading>
+              <p>{link.description}</p>
+            </div>
+          </a>
+        ): (
+          // Internal link
+          <Link
+            className={clsx('card padding--lg', styles.featureItem)}
+            to={link.to}>
+            <div className="text--center">
+              <div className={styles.featureIcon}>{link.icon}</div>
+              <Heading as="h3">{link.title}</Heading>
+              <p>{link.description}</p>
+            </div>
+          </Link>
+        )
+      ))}
     </section>
   );
 }
@@ -147,11 +118,13 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} docs`}
-      description="delta is a new decentralized network which breaks the tradeoffs of traditional blockchains.">
-      <HomepageHeader />
+      title={`${siteConfig.title}`}
+      description="delta is a new decentralized network which breaks the tradeoffs of traditional blockchains."
+      noFooter={true}
+      >
+      <HeroSection />
       <main>
-        <QuickLinksSection />
+        <FeaturesSection />
       </main>
     </Layout>
   );
