@@ -8,49 +8,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Heading from '@theme/Heading';
 
 
-
-const featuresList = [
-  {
-    title: 'Information for developers',
-    description: 'Details on domain setup',
-    to: '/docs/docs/building/delta-sdk',
-    icon: '🚀',
-    type: 'link'
-  },
-  {
-    title: 'Protocol background',
-    description: 'Deep dive into the delta protocol',
-    to: '/docs/docs/background',
-    icon: '🌊',
-    type: 'link',
-  },
-  {
-    title: 'delta for Regulated Finance',
-    description: 'Read the deck',
-    to: '/docs/files/delta_for_RTA.pdf',
-    icon: '⬇️',
-    type: 'download',
-    filename: 'delta_for_RTA.pdf'
-  },
-];
-
 function HeroSection() {
   const {siteConfig} = useDocusaurusContext();
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-
-        {/* hero blurb */}
+        <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
+        <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
         <div className={styles.heroDescription}>
           <p>
             delta is a new decentralized network which breaks the tradeoffs of traditional blockchains.
           </p>
         </div>
-
-        {/* main button */}
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -59,71 +29,100 @@ function HeroSection() {
           </Link>
         </div>
       </div>
+      <div className={styles.heroImageContainer}>
+        <img
+          src="img/delta-symbol-white.svg"
+          alt="delta illustration"
+          className={styles.bouncingImage}
+        />
+      </div>
     </header>
   );
 }
 
+function FeatureItem({title, description, to, icon, type, filename}) {
+  const isDownload = type === 'download';
+  const isExternal = type === 'external';
+  const Wrapper = (isDownload || isExternal) ? 'a' : Link;
+  
+  const wrapperProps = isDownload ? {
+    href: useBaseUrl(to),
+    download: filename,
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  } : isExternal ? {
+    href: to,
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  } : {
+    to: to,
+  };
+
+  const cardClassName = clsx(
+    'card padding--lg',
+    styles.featureItem,
+    isDownload && styles.downloadCard,
+    isExternal && styles.externalCard
+  );
+
+  return (
+    <Wrapper className={cardClassName} {...wrapperProps}>
+      <div className="text--center">
+        <div className={styles.featureIcon}>{icon}</div>
+        <Heading as="h3" className={styles.featureTitle}>
+          {title}
+          {isExternal && <span className={styles.externalIcon}> ↗</span>}
+        </Heading>
+        <p className={styles.featureDescription}>{description}</p>
+      </div>
+    </Wrapper>
+  );
+}
+
 function FeaturesSection() {
+  const featuresList = [
+    {
+      title: 'Information for developers',
+      description: 'Details on domain setup',
+      to: '/docs/docs/building/getting-started',
+      icon: '🚀',
+      type: 'link'
+    },
+    {
+      title: 'Protocol background',
+      description: 'Deep dive into the delta protocol',
+      to: '/docs/docs/background',
+      icon: '🌊',
+      type: 'link',
+    },
+    {
+      title: 'delta for Regulated Finance',
+      description: 'Read the deck',
+      to: '/docs/files/delta_for_RTA.pdf',
+      icon: '⬇️',
+      type: 'download',
+      filename: 'delta_for_RTA.pdf'
+    },
+  ];
+
   return (
     <section className={styles.features}>
-      {featuresList.map((link, idx) => (
-          link.type === 'download' ? (
-            // Download link
-          <a
-            className={clsx('card padding--lg', styles.featureItem, styles.downloadCard)}
-            href={useBaseUrl(link.to)}
-            download={link.filename}
-            target="_blank"
-            rel="noopener noreferrer">
-            <div className="text--center">
-              <div className={styles.featureIcon}>{link.icon}</div>
-              <Heading as="h3">{link.title}</Heading>
-              <p>{link.description}</p>
-            </div>
-          </a>
-        ) : link.type === 'external' ? (
-          // External link
-          <a
-            className={clsx('card padding--lg', styles.featureItem, styles.externalCard)}
-            href={link.to}
-            target="_blank"
-            rel="noopener noreferrer">
-            <div className="text--center">
-              <div className={styles.featureIcon}>{link.icon}</div>
-              <Heading as="h3">
-                {link.title}
-                <span className={styles.externalIcon}> ↗</span>
-              </Heading>
-              <p>{link.description}</p>
-            </div>
-          </a>
-        ): (
-          // Internal link
-          <Link
-            className={clsx('card padding--lg', styles.featureItem)}
-            to={link.to}>
-            <div className="text--center">
-              <div className={styles.featureIcon}>{link.icon}</div>
-              <Heading as="h3">{link.title}</Heading>
-              <p>{link.description}</p>
-            </div>
-          </Link>
-        )
+      {featuresList.map((props, idx) => (
+        <FeatureItem key={idx} {...props} />
       ))}
     </section>
   );
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="delta is a new decentralized network which breaks the tradeoffs of traditional blockchains."
+      title="Home"
+      description="delta Network Docs"
       noFooter={true}
       >
-      <HeroSection />
       <main>
+        <HeroSection />
         <FeaturesSection />
       </main>
     </Layout>

@@ -33,61 +33,98 @@ h6 + ul, h6 + ol {
   --ifm-hover-overlay: rgba(40, 83, 107, 0.05);
 }
 
+.hero {
+  background: linear-gradient(135deg, #355780 0%, #233A54 100%);
+}
+
 /* Dark mode */
 [data-theme='dark'] {
-  /* Primary colors - brighter for better contrast */
-  --ifm-color-primary: #60b0ff;
-  --ifm-color-primary-dark: #4aa3ff;
-  --ifm-color-primary-darker: #3d9aff;
-  --ifm-color-primary-darkest: #1a82ff;
-  --ifm-color-primary-light: #76bdff;
-  --ifm-color-primary-lighter: #8ac6ff;
-  --ifm-color-primary-lightest: #afd6ff;
+  /* Primary colors - using your primary palette */
+  --ifm-color-primary: #878a8b;           /* clr-primary-a50 - main interactive color */
+  --ifm-color-primary-dark: #6c7071;      /* clr-primary-a40 */
+  --ifm-color-primary-darker: #515657;    /* clr-primary-a30 */
+  --ifm-color-primary-darkest: #383d3f;   /* clr-primary-a20 */
+  --ifm-color-primary-light: #9fa1a2;     /* lighter than a50 */
+  --ifm-color-primary-lighter: #b3b5b5;   /* even lighter */
+  --ifm-color-primary-lightest: #c7c8c9;  /* lightest */
   
-  /* Background colors - better contrast between layers */
-  --ifm-background-color: #0d1117;
-  --ifm-background-surface-color: #161b22;
-  --ifm-card-background-color: #1c2128;
-  --ifm-navbar-background-color: #0d1117;
-  --ifm-footer-background-color: #0d1117;
+  /* Background colors - using your surface palette */
+  --ifm-background-color: #121212;        /* clr-surface-a0 - main background */
+  --ifm-background-surface-color: #282828; /* clr-surface-a10 - raised surfaces */
   
-  /* Text colors - much brighter for readability */
-  --ifm-font-color-base: #e6edf3;
-  --ifm-font-color-secondary: #8d96a0;
-  --ifm-footer-color: #8d96a0;
-  --ifm-footer-link-color: #e6edf3;
-  --ifm-footer-title-color: #ffffff;
-  --ifm-navbar-link-color: #e6edf3;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
-  --ifm-menu-color: #8d96a0;
-  --ifm-menu-color-hover: #e6edf3;
-  --ifm-menu-color-active: var(--ifm-color-primary);
+  /* Card and component backgrounds */
+  --ifm-card-background-color: #233A54;   /* clr-surface-a20 */
+  --ifm-navbar-background-color: #111212; /* clr-surface-tonal-a0 */
+  --ifm-footer-background-color: #071012; /* clr-primary-a0 */
   
-  /* Border colors */
-  --ifm-color-emphasis-100: #21262d;
-  --ifm-color-emphasis-200: #30363d;
-  --ifm-color-emphasis-300: #484f58;
-  --ifm-color-emphasis-400: #6e7681;
+  /* Text colors */
+  --ifm-font-color-base: #ffffff;         /* clr-light-a0 - main text */
+  --ifm-font-color-secondary: #8b8b8b;    /* clr-surface-a50 - secondary text */
+  --ifm-heading-color: #ffffff;           /* headings */
   
-  /* Other */
-  --ifm-hover-overlay: rgba(96, 176, 255, 0.1);
-  --ifm-code-background: #161b22;
-  --docusaurus-highlighted-code-line-bg: rgba(96, 176, 255, 0.15);
+  /* Border and emphasis colors */
+  --ifm-color-emphasis-100: #282828;      /* clr-surface-a10 */
+  --ifm-color-emphasis-200: #3f3f3f;      /* clr-surface-a20 */
+  --ifm-color-emphasis-300: #575757;      /* clr-surface-a30 */
+  --ifm-color-emphasis-400: #717171;      /* clr-surface-a40 */
   
-  /* Alert backgrounds */
-  --ifm-color-info-contrast-background: #1c2d41;
-  --ifm-color-success-contrast-background: #1c3329;
-  --ifm-color-warning-contrast-background: #3d2e1c;
-  --ifm-color-danger-contrast-background: #3d1c1c;
+  /* Code blocks */
+  --ifm-code-background: #282828;         /* clr-surface-a10 */
+  --ifm-pre-background: #121212;          /* clr-surface-a0 */
+  
+  /* Success colors */
+  --ifm-color-success: #47d5a6;           /* clr-success-a10 */
+  --ifm-color-success-dark: #22946e;      /* clr-success-a0 */
+  --ifm-color-success-darker: #1d7d5d;
+  --ifm-color-success-darkest: #166548;
+  --ifm-color-success-light: #9ae8ce;     /* clr-success-a20 */
+  --ifm-color-success-lighter: #b5eedb;
+  --ifm-color-success-lightest: #d0f4e8;
+  --ifm-color-success-contrast-background: #1a3329; /* dark background for success alerts */
+  
+  /* Warning colors */
+  --ifm-color-warning: #d7ac61;           /* clr-warning-a10 */
+  --ifm-color-warning-dark: #a87a2a;      /* clr-warning-a0 */
+  --ifm-color-warning-darker: #8f6723;
+  --ifm-color-warning-darkest: #75541d;
+  --ifm-color-warning-light: #ecd7b2;     /* clr-warning-a20 */
+  --ifm-color-warning-lighter: #f1e2c5;
+  --ifm-color-warning-lightest: #f6edd8;
+  --ifm-color-warning-contrast-background: #332e1a; /* dark background for warning alerts */
+  
+  /* Danger colors */
+  --ifm-color-danger: #d94a4a;            /* clr-danger-a10 */
+  --ifm-color-danger-dark: #9c2121;       /* clr-danger-a0 */
+  --ifm-color-danger-darker: #851c1c;
+  --ifm-color-danger-darkest: #6d1717;
+  --ifm-color-danger-light: #eb9e9e;      /* clr-danger-a20 */
+  --ifm-color-danger-lighter: #f0b5b5;
+  --ifm-color-danger-lightest: #f5cccc;
+  --ifm-color-danger-contrast-background: #331a1a; /* dark background for danger alerts */
+  
+  /* Info colors */
+  --ifm-color-info: #4077d1;              /* clr-info-a10 */
+  --ifm-color-info-dark: #21498a;         /* clr-info-a0 */
+  --ifm-color-info-darker: #1c3d75;
+  --ifm-color-info-darkest: #17325f;
+  --ifm-color-info-light: #92b2e5;        /* clr-info-a20 */
+  --ifm-color-info-lighter: #aac4eb;
+  --ifm-color-info-lightest: #c2d6f1;
+  --ifm-color-info-contrast-background: #1c2d41; /* dark background for info alerts */
+  
+  /* Menu/Sidebar colors */
+  --ifm-menu-color: #8b8b8b;              /* clr-surface-a50 */
+  --ifm-menu-color-hover: #ffffff;        /* clr-light-a0 */
+  --ifm-menu-color-active: #878a8b;       /* clr-primary-a50 */
+  
+  /* Other useful colors */
+  --ifm-hover-overlay: rgba(135, 138, 139, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(135, 138, 139, 0.15);
 }
 
 /* Dark mode components */
 [data-theme='dark'] .hero {
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-}
-
-[data-theme='dark'] .quickLinks {
-  background-color: #161b22;
+  background: linear-gradient(135deg, #355780 0%, #233A54 100%);
 }
 
 [data-theme='dark'] .features {

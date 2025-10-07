@@ -10,11 +10,72 @@
   overflow: hidden;
 }
 
+.heroTitle {
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+  color: #b1ccea;
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .heroDescription {
   font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
   margin-top: 1rem;
   line-height: 1.6;
 }
+
+.heroImageContainer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.bouncingImage {
+  max-width: 100%;
+  height: auto;
+  animation: bounce 4s ease-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scaleY(0.96) scaleX(1.02);
+  }
+  5% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  15% {
+    transform: translateY(-20px) scaleY(1.01) scaleX(0.99);
+  }
+  30% {
+    transform: translateY(-60px) scaleY(1.03) scaleX(0.99);
+  }
+  40% {
+    transform: translateY(-80px) scaleY(1.06) scaleX(0.99);
+  }
+  50% {
+    transform: translateY(-60px) scaleY(1.03) scaleX(0.99);
+  }
+  60% {
+    transform: translateY(-20px) scaleY(1.01) scaleX(0.99);
+  }
+  75% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  95%, 100% {
+    transform: translateY(0) scaleY(0.96) scaleX(1.02);
+  }
+}
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -62,12 +123,14 @@
   margin-top: 0;
   color: var(--ifm-color-primary);
   font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .featureDescription {
   flex-grow: 1;
   margin-bottom: 0;
   color: var(--ifm-font-color-base) !important;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .featureItem:hover .featureTitle,
@@ -92,10 +155,45 @@
   }
 }
 
-
-
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Dark mode styles for homepage */
+[data-theme='dark'] .heroTitle {
+  color: #A0B7D2;
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .heroDescription {
+  color: #b0b0b0;
+}
+
+[data-theme='dark'] .featureItem {
+  background-color: var(--ifm-card-background-color);
+  border: 2px solid transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .featureItem:hover {
+  box-shadow: 0 4px 20px rgba(138, 137, 255, 0.2);
+  border-color: rgba(138, 137, 255, 0.3);
+}
+
+[data-theme='dark'] .featureItem h3 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .featureItem p {
+  color: #b0b0b0;
+}
+
+[data-theme='dark'] .main {
+  background-color: #12125a;
+  color: #ffffff;
 }
