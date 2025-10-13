@@ -42,37 +42,16 @@
 .bouncingImage {
   max-width: 100%;
   height: auto;
-  animation: bounce 4s ease-out infinite;
+  animation: bounce 5s ease-in-out infinite;
   transform-origin: center bottom;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0) scaleY(0.96) scaleX(1.02);
-  }
-  5% {
+  0%, 100% {
     transform: translateY(0) scaleY(1) scaleX(1);
-  }
-  15% {
-    transform: translateY(-20px) scaleY(1.01) scaleX(0.99);
-  }
-  30% {
-    transform: translateY(-60px) scaleY(1.03) scaleX(0.99);
-  }
-  40% {
-    transform: translateY(-80px) scaleY(1.06) scaleX(0.99);
   }
   50% {
-    transform: translateY(-60px) scaleY(1.03) scaleX(0.99);
-  }
-  60% {
-    transform: translateY(-20px) scaleY(1.01) scaleX(0.99);
-  }
-  75% {
-    transform: translateY(0) scaleY(1) scaleX(1);
-  }
-  95%, 100% {
-    transform: translateY(0) scaleY(0.96) scaleX(1.02);
+    transform: translateY(-25px) scaleY(1.01) scaleX(0.995);
   }
 }
 
