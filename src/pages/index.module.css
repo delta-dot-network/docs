@@ -10,25 +10,36 @@
   overflow: hidden;
 }
 
+.heroContent {
+  flex: 1;
+  max-width: 60%;
+}
+
 .heroTitle {
-  font-size: 3rem;
-  font-family: 'Arial', sans-serif;
-  color: #b1ccea;
+  font-size: 3.5rem;
+  color: #0C003A;
   margin-bottom: 0.5rem;
 }
 
 .heroSubtitle {
   font-size: 2.5rem;
-  font-family: 'Courier New', Courier, monospace;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .heroDescription {
   font-size: 1.2rem;
-  font-family: 'Courier New', Courier, monospace;
+  color: #7A1942;
+  font-family: monospace;
   margin-top: 1rem;
   line-height: 1.6;
+}
+
+.heroButton {
+  background-color: #0C003A;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .heroImageContainer {
@@ -77,7 +88,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: var(--ifm-card-primary-grey);
+  background-color: #f2f2f285;
   border-radius: var(--ifm-card-border-radius);
   margin-bottom: 2rem;
   box-shadow: var(--ifm-global-shadow-lw);
@@ -89,8 +100,8 @@
 
 .featureItem:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 255, 0.1);
-  border-color: rgba(0, 0, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(204, 43, 169, 0.2);
+  border-color: rgba(204, 43, 169, 0.3);
 }
 
 .featureIcon {
@@ -100,16 +111,13 @@
 
 .featureTitle {
   margin-top: 0;
-  color: var(--ifm-color-primary);
   font-size: 1.5rem;
-  font-family: 'Arial', sans-serif;
 }
 
 .featureDescription {
   flex-grow: 1;
   margin-bottom: 0;
   color: var(--ifm-font-color-base) !important;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .featureItem:hover .featureTitle,
@@ -142,7 +150,7 @@
 
 /* Dark mode styles for homepage */
 [data-theme='dark'] .heroTitle {
-  color: #A0B7D2;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .heroSubtitle {
@@ -153,6 +161,11 @@
   color: #b0b0b0;
 }
 
+[data-theme='dark'] .heroButton {
+  background-color: #1c2128;
+  color: #ffffff;
+}
+
 [data-theme='dark'] .featureItem {
   background-color: var(--ifm-card-background-color);
   border: 2px solid transparent;
@@ -160,8 +173,8 @@
 }
 
 [data-theme='dark'] .featureItem:hover {
-  box-shadow: 0 4px 20px rgba(138, 137, 255, 0.2);
-  border-color: rgba(138, 137, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(157, 34, 85, 0.2);
+  border-color: rgba(157, 34, 85, 0.3);
 }
 
 [data-theme='dark'] .featureItem h3 {

@@ -19,112 +19,75 @@ h6 + ul, h6 + ol {
 
 /* Light mode */
 :root {
-  --ifm-color-primary: #28536B;
-  --ifm-color-primary-dark: #24495f;
-  --ifm-color-primary-darker: #22455a;
-  --ifm-color-primary-darkest: #1c394a;
-  --ifm-color-primary-light: #2c5d77;
-  --ifm-color-primary-lighter: #2e617c;
-  --ifm-color-primary-lightest: #336e88;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Primary color palette */
+  --ifm-color-primary: #DB5797;
+  --ifm-color-primary-dark: #D44487;
+  --ifm-color-primary-darker: #CE377C;
+  --ifm-color-primary-darkest: #C02E6D;
+  --ifm-color-primary-light: #E170A9;
+  --ifm-color-primary-lighter: #E892BE;
+  --ifm-color-primary-lightest: #F1BBD7;
+
+
+  /* Additional semantic colors */
+  --ifm-color-secondary: #9D2256;
+  --ifm-color-secondary-dark: #8d1f4d;
+  --ifm-color-secondary-darker: #851d49;
+  --ifm-color-secondary-darkest: #6e183c;
+  --ifm-color-secondary-light: #ad255f;
+  --ifm-color-secondary-lighter: #b32764;
+  --ifm-color-secondary-lightest: #c92c70;
+
+  /* Background and surface colors */
   --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f8f9fa;
-  --ifm-hover-overlay: rgba(40, 83, 107, 0.05);
+  --ifm-background-surface-color: #F2F2F2;
+
+  /* Code block colors */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(219, 87, 151, 0.15);
+
+  /* fonts */
+    /* Homepage header - Bold, impactful sans-serif */
+    --ifm-heading-font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, 
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Accents/taglines - Monospace for technical feel */
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'SF Mono', 
+    Monaco, Consolas, 'Courier New', monospace;
+  
+  /* Documentation content - Clean, readable sans-serif */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', 
+    'Roboto', sans-serif;
 }
 
+
 .hero {
-  background: linear-gradient(135deg, #355780 0%, #233A54 100%);
+  background: linear-gradient(135deg, #d12d9d28 0%, #cc2ba9a9 100%);
 }
 
 /* Dark mode */
 [data-theme='dark'] {
-  /* Primary colors - using your primary palette */
-  --ifm-color-primary: #878a8b;           /* clr-primary-a50 - main interactive color */
-  --ifm-color-primary-dark: #6c7071;      /* clr-primary-a40 */
-  --ifm-color-primary-darker: #515657;    /* clr-primary-a30 */
-  --ifm-color-primary-darkest: #383d3f;   /* clr-primary-a20 */
-  --ifm-color-primary-light: #9fa1a2;     /* lighter than a50 */
-  --ifm-color-primary-lighter: #b3b5b5;   /* even lighter */
-  --ifm-color-primary-lightest: #c7c8c9;  /* lightest */
-  
-  /* Background colors - using your surface palette */
-  --ifm-background-color: #121212;        /* clr-surface-a0 - main background */
-  --ifm-background-surface-color: #282828; /* clr-surface-a10 - raised surfaces */
-  
-  /* Card and component backgrounds */
-  --ifm-card-background-color: #233A54;   /* clr-surface-a20 */
-  --ifm-navbar-background-color: #111212; /* clr-surface-tonal-a0 */
-  --ifm-footer-background-color: #071012; /* clr-primary-a0 */
-  
-  /* Text colors */
-  --ifm-font-color-base: #ffffff;         /* clr-light-a0 - main text */
-  --ifm-font-color-secondary: #8b8b8b;    /* clr-surface-a50 - secondary text */
-  --ifm-heading-color: #ffffff;           /* headings */
-  
-  /* Border and emphasis colors */
-  --ifm-color-emphasis-100: #282828;      /* clr-surface-a10 */
-  --ifm-color-emphasis-200: #3f3f3f;      /* clr-surface-a20 */
-  --ifm-color-emphasis-300: #575757;      /* clr-surface-a30 */
-  --ifm-color-emphasis-400: #717171;      /* clr-surface-a40 */
-  
-  /* Code blocks */
-  --ifm-code-background: #282828;         /* clr-surface-a10 */
-  --ifm-pre-background: #121212;          /* clr-surface-a0 */
-  
-  /* Success colors */
-  --ifm-color-success: #47d5a6;           /* clr-success-a10 */
-  --ifm-color-success-dark: #22946e;      /* clr-success-a0 */
-  --ifm-color-success-darker: #1d7d5d;
-  --ifm-color-success-darkest: #166548;
-  --ifm-color-success-light: #9ae8ce;     /* clr-success-a20 */
-  --ifm-color-success-lighter: #b5eedb;
-  --ifm-color-success-lightest: #d0f4e8;
-  --ifm-color-success-contrast-background: #1a3329; /* dark background for success alerts */
-  
-  /* Warning colors */
-  --ifm-color-warning: #d7ac61;           /* clr-warning-a10 */
-  --ifm-color-warning-dark: #a87a2a;      /* clr-warning-a0 */
-  --ifm-color-warning-darker: #8f6723;
-  --ifm-color-warning-darkest: #75541d;
-  --ifm-color-warning-light: #ecd7b2;     /* clr-warning-a20 */
-  --ifm-color-warning-lighter: #f1e2c5;
-  --ifm-color-warning-lightest: #f6edd8;
-  --ifm-color-warning-contrast-background: #332e1a; /* dark background for warning alerts */
-  
-  /* Danger colors */
-  --ifm-color-danger: #d94a4a;            /* clr-danger-a10 */
-  --ifm-color-danger-dark: #9c2121;       /* clr-danger-a0 */
-  --ifm-color-danger-darker: #851c1c;
-  --ifm-color-danger-darkest: #6d1717;
-  --ifm-color-danger-light: #eb9e9e;      /* clr-danger-a20 */
-  --ifm-color-danger-lighter: #f0b5b5;
-  --ifm-color-danger-lightest: #f5cccc;
-  --ifm-color-danger-contrast-background: #331a1a; /* dark background for danger alerts */
-  
-  /* Info colors */
-  --ifm-color-info: #4077d1;              /* clr-info-a10 */
-  --ifm-color-info-dark: #21498a;         /* clr-info-a0 */
-  --ifm-color-info-darker: #1c3d75;
-  --ifm-color-info-darkest: #17325f;
-  --ifm-color-info-light: #92b2e5;        /* clr-info-a20 */
-  --ifm-color-info-lighter: #aac4eb;
-  --ifm-color-info-lightest: #c2d6f1;
-  --ifm-color-info-contrast-background: #1c2d41; /* dark background for info alerts */
-  
-  /* Menu/Sidebar colors */
-  --ifm-menu-color: #8b8b8b;              /* clr-surface-a50 */
-  --ifm-menu-color-hover: #ffffff;        /* clr-light-a0 */
-  --ifm-menu-color-active: #878a8b;       /* clr-primary-a50 */
-  
-  /* Other useful colors */
-  --ifm-hover-overlay: rgba(135, 138, 139, 0.1);
-  --docusaurus-highlighted-code-line-bg: rgba(135, 138, 139, 0.15);
+  --ifm-color-primary: #E05698;
+  --ifm-color-primary-dark: #DA478D;
+  --ifm-color-primary-darker: #D33E82;
+  --ifm-color-primary-darkest: #C73477;
+  --ifm-color-primary-light: #E674AD;
+  --ifm-color-primary-lighter: #ED9FC7;
+  --ifm-color-primary-lightest: #F4C4DE;
+
+    /* Additional semantic colors */
+  --ifm-color-secondary: #B22A65;
+  --ifm-color-secondary-dark: #a3265c;
+  --ifm-color-secondary-darker: #9a2457;
+  --ifm-color-secondary-darkest: #7f1e48;
+  --ifm-color-secondary-light: #c12f6e;
+  --ifm-color-secondary-lighter: #c73477;
+  --ifm-color-secondary-lightest: #d33e82;
 }
 
 /* Dark mode components */
 [data-theme='dark'] .hero {
-  background: linear-gradient(135deg, #355780 0%, #233A54 100%);
+  background: linear-gradient(135deg, #e6328914 0%, #9d2255b3 100%);
 }
 
 [data-theme='dark'] .features {
@@ -149,4 +112,28 @@ h6 + ul, h6 + ol {
   [data-theme='dark'] .hero {
     background: #0d1117;
   }
+}
+
+.header-github:hover {
+  opacity: 0.8;
+}
+
+/* Light mode GitHub icon - dark icon for light background */
+.header-github:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+/* Dark mode GitHub icon - white icon for dark background */
+[data-theme='dark'] .header-github:before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+[data-theme='dark'] .header-github:hover {
+  opacity: 0.7;
 }

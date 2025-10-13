@@ -1,6 +1,7 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useColorMode } from '@docusaurus/theme-common';
 import styles from './index.module.css';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
@@ -10,10 +11,11 @@ import Heading from '@theme/Heading';
 
 function HeroSection() {
   const {siteConfig} = useDocusaurusContext();
+  const {colorMode} = useColorMode();
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
         <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
         <div className={styles.heroDescription}>
@@ -23,7 +25,7 @@ function HeroSection() {
         </div>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={styles.heroButton}
             to="/docs/docs/frontpage">
             Read the docs
           </Link>
@@ -31,7 +33,9 @@ function HeroSection() {
       </div>
       <div className={styles.heroImageContainer}>
         <img
-          src="img/delta-symbol-white.svg"
+          src={useBaseUrl(
+            colorMode === 'dark' ? 'img/delta-symbol-black.svg' : 'img/delta-symbol-white.svg'
+          )}
           alt="delta illustration"
           className={styles.bouncingImage}
         />
@@ -108,7 +112,7 @@ function FeaturesSection() {
   return (
     <section className={styles.features}>
       {featuresList.map((props, idx) => (
-        <FeatureItem key={idx} {...props} />
+        <FeatureItem key={idx} title={props.title} description={props.description} to={props.to} icon={props.icon} type={props.type} filename={props.filename} />
       ))}
     </section>
   );

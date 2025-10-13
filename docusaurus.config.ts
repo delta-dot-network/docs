@@ -49,7 +49,6 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: 'delta Network',
       logo: {
         alt: 'delta Network Logo',
         src: '/img/delta-symbol-black.svg',
@@ -57,21 +56,25 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docSidebar',
+          type: 'doc',
+          docId: 'learning/delta-domains',
           position: 'left',
-          label: 'Docs',
+          label: 'for Businesses',
         },
-        //{to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'doc',
+          docId: 'building/getting-started',
+          position: 'left',
+          label: 'for Builders',
+        },
         {
           href: 'https://github.com/Repyh-Labs',
-          label: 'GitHub',
+          className: 'header-github',
           position: 'right',
         },
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           title: 'Website',
