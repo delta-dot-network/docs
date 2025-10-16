@@ -1,10 +1,10 @@
 ---
 title: Domain components
 sidebar_label: 'Domain components'
-sidebar_position: 5
+sidebar_position: 2
 ---
 
-# Components of a domain on delta
+# Components of a delta domain
 
 To build a domain on delta, there are three main elements of the system you’ll need to know well: the domain you’ll build, the executor that allows you to connect this domain to the base layer, and the shard that your domain will own.
 

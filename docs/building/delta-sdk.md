@@ -1,7 +1,7 @@
 ---
 title: The delta SDK
 sidebar_label: 'The delta SDK'
-sidebar_position: 3
+sidebar_position: 1
 ---
 # Introducing the delta SDK
 

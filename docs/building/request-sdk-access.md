@@ -1,7 +1,7 @@
 ---
 title: Request SDK Access
 sidebar_label: 'Request SDK Access'
-sidebar_position: 7
+sidebar_position: 4
 ---
 
 # Get Access to the delta SDK and Code Documentation

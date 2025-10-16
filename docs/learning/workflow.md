@@ -14,4 +14,9 @@ Domains are independent applications built on delta that manage their own transa
 4. The domain decides when to settle all local changes to delta; signed user transactions, the aggregated changes, and other context is used to create a RISC-V proof (current version uses SP1). The state difference list (SDL) and proof are sent to delta via the domain’s chosen validator, which will start the consensus process immediately. Global ordering of state updates is not needed, which mitigates congestion and latency issues seen in legacy blockchains.
 5. After the synchornization and verification process, updates are applied and finalized to global state. 
 
-![domain workflow diagram](/img/domain_workflows.png)
+### What does this mean for the end user?
+- **No gas:** Network fees only apply during state updates from the domain to the base layer, which means your customers will never have to worry about gas.
+- **No crypto wallets:** delta supports passkey signing, allowing users to transact with familiar UX and quick setup.
+- **No delays:** transactions within a domain are applied locally immediately, so users don't need to wait for base layer finality.
+
+On delta, the user experience is what you design it to be - without the interruptions or restraints of legacy blockchains.

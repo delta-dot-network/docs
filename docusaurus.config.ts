@@ -57,7 +57,7 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'learning/delta-domains',
+          docId: 'welcome',
           position: 'left',
           label: 'for Businesses',
         },
@@ -66,6 +66,11 @@ const config: Config = {
           docId: 'building/getting-started',
           position: 'left',
           label: 'for Builders',
+        },
+        {
+          href: 'https://x.com/deltadotnetwork',
+          className: 'header-twitter',
+          position: 'right',
         },
         {
           href: 'https://github.com/Repyh-Labs',
@@ -89,24 +94,17 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Writing',
-              href: 'https://www.delta.network/writing',
-            },
-            {
               label: 'X',
-              href: 'https://x.com/deltadotnetwork',
+              to: 'https://x.com/deltadotnetwork',
             },
           ],
         },
         {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Repyh-Labs',
-            },
-          ],
+          /* placeholder for now */
         },
+        {
+          /* placeholder for now */
+        }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} repyh labs. Built with Docusaurus.`,
     },

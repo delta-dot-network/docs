@@ -13,8 +13,8 @@ Coming soon: Declaring and enforcing **Token Laws**
 "Laws" on delta describe the rules and logic limiting user transactions. There are three categories of laws on delta:
 
 **1. Global Laws**
-    - Applied to every transaction on every domain
-    - Intentionally minimal, only restricting activity that would break the network (e.g. valid signature required, balances cannot be negative)
+- Applied to every transaction on every domain
+- Intentionally minimal, only restricting activity that would break the network (e.g. valid signature required, balances cannot be negative)
 
 **2. Local (Domain) Laws**
 - Optionally defined by a domain, and only applied to transactions occurring on that domain

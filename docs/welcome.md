@@ -19,4 +19,8 @@ delta is a new distributed system that lets you launch **independent execution e
     - Verified SDLs are gossiped between validators, who update the global state. Because of the spending constraints enforced in delta’s state model, all submitted SDLs can be processed by validators in parallel. Unlike legacy blockchains, delta does not produce blocks or require global total ordering.
     - Since all assets are issued and stored on a single base layer, assets on delta can be transferred and used across any domain on the network (i.e. the base layer provides native interoperability, no bridging required).
     
-![delta_high_level.png](/img/delta_high_level.png)
+<div className="invertable-diagram">
+
+![delta High Level Diagram](/img/delta_high_level_light.png)
+
+</div>
