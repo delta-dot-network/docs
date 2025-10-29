@@ -1,7 +1,7 @@
 ---
 title: Token Issuance
 sidebar_label: 'Token Issuance'
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Issuing tokens on delta and defining Token Laws

@@ -26,7 +26,7 @@ Coming soon: Declaring and enforcing **Token Laws**
 
 ## Proving Workflow
 
-### Proofs in the Transaction Workflow
+### Proofs in the Transaction Workflow {#proof-workflow}
 The enforcement and proving of Laws is part of the transaction lifecycle:<br />
 **Transaction**<br />
 Users sign transaction messages.
@@ -38,7 +38,7 @@ Valid transactions are immediately applied to the domain's local balances and ad
 When a domain chooses to settle changes to the base layer, the State Diff List, transaction context, vault balances, and Law programs are processed through a RISC-V zkVM to generate a zero-knowledge proof. This proof and the associated State Diff List are sent to the Base Layer for validation and final application.
 
 ![transaction_workflow.png](/img/transaction_workflow.png)
- 
+
 ### Defining Local Laws
 Local Laws are optional, and defined by the domain. A domain can declare their local laws by providing the Risc-V Proof Program Hash when declaring their [Executor Lease Agreement](/docs/docs/background/glossary#ela) during domain setup.
 

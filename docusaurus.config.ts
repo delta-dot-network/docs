@@ -63,7 +63,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'building/getting-started',
+          docId: 'building/delta-sdk',
           position: 'left',
           label: 'for Builders',
         },

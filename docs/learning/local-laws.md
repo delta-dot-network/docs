@@ -1,7 +1,7 @@
 ---
 title: Local Laws
 sidebar_label: 'Local Laws'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # How local laws can add guardrails to a delta domain

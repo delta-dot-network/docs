@@ -26,7 +26,7 @@ function HeroSection() {
         <div className={styles.buttons}>
           <Link
             className={styles.heroButton}
-            to="/docs/docs/frontpage">
+            to="/docs/docs/welcome">
             Read the docs
           </Link>
         </div>
@@ -88,7 +88,7 @@ function FeaturesSection() {
     {
       title: 'Information for developers',
       description: 'Details on domain setup',
-      to: '/docs/docs/building/getting-started',
+      to: '/docs/docs/building/delta-sdk',
       icon: '🚀',
       type: 'link'
     },
