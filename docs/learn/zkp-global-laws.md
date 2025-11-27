@@ -1,7 +1,5 @@
 ---
 title: ZK Proving and Global Laws
-sidebar_label: 'ZK Proving and Global Laws'
-sidebar_position: 3
 ---
 
 # ZK Proving and Global Laws on the delta Network
@@ -23,7 +21,7 @@ The domain SDK runtime automatically:
 - uses the domain’s configured prover to generate a RISC-V zero-knowledge proof for that SDL.
 - Once the proof is ready, the SDK handles submission of the SDL + proof to the base layer
 
-All [proof lifecycle](../background/laws#proof-workflow) management is handled by the SDK — domains only need to configure their proving settings during initial domain setup.
+All [proof lifecycle](./proof-lifecycle) management is handled by the SDK — domains only need to configure their proving settings during initial domain setup.
 
 ### Choosing a proving setup
 

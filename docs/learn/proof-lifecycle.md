@@ -1,16 +1,16 @@
 ---
-title: Laws and Proofs
-description: Global and Local laws, and how they affect consensus
-sidebar_label: 'Laws and Proofs'
-sidebar_position: 5
+title: Proof Lifecycle
 ---
 
-# Laws and Proving on the delta Network
+# Proving and Verification
+
 :::info
 Coming soon: Declaring and enforcing **Token Laws**
 :::
+
 ## Overview
-"Laws" on delta describe the rules and logic limiting user transactions. There are three categories of laws on delta:
+
+"Laws" on delta describe the rules and logic limiting user-level transactions. There are three categories of laws on delta:
 
 **1. Global Laws**
 - Applied to every transaction on every domain
@@ -27,6 +27,7 @@ Coming soon: Declaring and enforcing **Token Laws**
 ## Proving Workflow
 
 ### Proofs in the Transaction Workflow {#proof-workflow}
+
 The enforcement and proving of Laws is part of the transaction lifecycle:<br />
 **Transaction**<br />
 Users sign transaction messages.
@@ -40,15 +41,18 @@ When a domain chooses to settle changes to the base layer, the State Diff List, 
 ![transaction_workflow.png](/img/transaction_workflow.png)
 
 ### Defining Local Laws
-Local Laws are optional, and defined by the domain. A domain can declare their local laws by providing the Risc-V Proof Program Hash when declaring their [Executor Lease Agreement](/docs/docs/background/glossary#ela) during domain setup.
+
+Local Laws are optional, and defined by the domain. A domain can declare their local laws by providing the Risc-V Proof Program Hash when declaring their [Domain Agreement](../glossary#ela) during domain setup.
 
 ### Proof Aggregation
+
 delta's proof program uses proof aggregation to maintain efficiency regardless of local law complexity. Local laws (if defined) are proven first. The resulting zk-proof is then validated as part of the global law proof program. As a result, any number or complexity of local laws compress to just a few bytes while remaining cryptographically secure. <br />
 The resulting overall workflow is seen below:
 
 ![transaction_proving_workflow.png](/img/transaction_proving_workflow.png)
 
 ## Guide: Writing a Local Law
+
 Local laws must be expressed as a program in order to be proven in a Risc-V zkVM. For example, if a domain wants to restrict activity to only users on a specific allowlist, this will be enforced by writing a program which asserts that each transaction message sender (and, optionally, transfer recipient) matches an address on the allowlist.
 
 
@@ -80,5 +84,5 @@ pub fn main() {
 }
 ```
 :::note
-Our team can help translate your required local laws into provable programs. Please [contact us](/docs/docs/building/request-sdk-access) for more details.
+Our team can help translate your required local laws into provable programs. Please [contact us](../../resources/request-sdk-access) for more details.
 :::

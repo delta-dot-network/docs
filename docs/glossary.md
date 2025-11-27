@@ -1,8 +1,6 @@
 ---
 title: Glossary of delta terms
 description: delta terms and definitions
-sidebar_label: 'Glossary'
-sidebar_position: 1
 ---
 
 # Glossary of delta terms
@@ -17,15 +15,15 @@ Describes the domain layer of the delta ecosystem, as all transaction execution 
 
 ### Validator
 
-A compute node on the network communicating with other validators (its peers) to keep track of the system and its state.
+A node on the network communicating with other validators (its peers) to keep track of the system and its state.
 
 ### Domain
 
-A local execution environment in delta. In addition to any custom code (including frontend interfaces and application logic), a domain contains an executor which handles the domain's integration with the delta base layer.
+An independent execution environment connected to the delta Base Layer. A domain consists of custom code (frontend interfaces, custom storage and application logic) and a `domain client` which handles the domain's integration with the delta base layer.
 
-### Executor
+### Domain Client
 
-The component of a domain which contains a copy of the domain's shard (including all vaults and balances), handles the creation of SDLs, coordinates proof generation, and communicates with the delta base layer. Domain operators will use the delta SDK to set up and optionally customize their executor.
+The component of a domain which contains a copy of the domain's shard (including all vaults and balances), handles the creation of SDLs, coordinates proof generation, and communicates with the delta base layer. Domain operators will use the domain SDK to set up and optionally customize their client.
 
 ### Shard
 
@@ -33,7 +31,7 @@ Global state on the base layer is organized into shards, where each domain owns 
 
 ### Transaction
 
-A signed message to change state. Transactions which occur on domains may be referred to as "user-level transactions" or sometimes "intents." Transactions from domains to the base layer (submission of SDLs and proofs) are referred to as "execution transactions," and transactions directly to the base layer (deployment of a new domain or validator) are "base layer transactions."
+A signed message to change state. Transactions which occur on domains are referred to as "user-level transactions" or "user intents." Transactions from domains to the base layer (submission of SDLs and proofs) are referred to as "execution transactions," and transactions directly to the base layer (deployment of a new domain or validator) are "base layer transactions."
 
 ### State Diff
 
@@ -63,9 +61,13 @@ Rules that are imposed by a domain and apply to user-level transactions which oc
 
 The minimal denomination for fungible tokens on the delta network.
 
-### Executor Lease Agreement (ELA) {#ela}
+### Domain Agreement {#ela}
 
-A record stored at the base layer which identifies a domain along with the domain's executor and owned shard.
+A record stored at the base layer which identifies a domain along with the domain's operator and owned shard.
+
+### Domain Operator
+
+The signer who controls a Domain.
 
 ### Vault
 
@@ -77,7 +79,7 @@ A vault type which represents a non-native token on the delta network. Token min
 
 ### Token Holding
 
-A "typical" vault, which holds tokens and is owned by either a user, program, or domain executor.
+A "typical" vault, which holds tokens and is owned by either a user, program, or domain operator.
 
 ### Debit (debit allowances)
 

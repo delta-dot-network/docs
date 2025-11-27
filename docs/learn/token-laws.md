@@ -8,7 +8,7 @@ sidebar_position: 5
 
 Issuing tokens on the delta Network is simple. Fungible tokens and their token laws (e.g. allow/block lists) are supported natively.
 
-Each fungible token or NFT collection exists on delta as a [Token Mint](../background/tokens), controlled by the issuing party and located on a domain.
+Each fungible token or NFT collection exists on delta as a Token Mint, controlled by the issuing party and located on a domain.
 Creating a new token, issuing additional supply, or updating token laws are all handled with a single transaction which can be created with a HTTPS API and signed with a library; ***no need to deploy any smart contracts.***
 
 ### Token Laws

@@ -1,16 +1,16 @@
 ---
 title: Vaults and Accounts on delta
-description: Overview of vaults and the delta account model
-sidebar_label: 'Vaults'
-sidebar_position: 3
 ---
 
 # Accounts and Vaults on the delta Network
+
 :::info
 Coming soon: **Escrow Vaults**, **Passkey** Account Recovery, **Multi-Sig** Vaults
 :::
+
 ## Overview
-**Vaults** exist on domains, and are identified by a **pubkey** and the domain's [**shard ID**](/docs/docs/background/glossary#shard) to make up the **Vault ID**. 
+
+**Vaults** exist on domains, and are identified by an **Owner Id** and the domain's [**shard ID**](../glossary#shard) to make up the **Vault ID**. 
 
 Activity on domains is centered around vaults, and all user-level transactions which make up a SDL involve vaults.
 
@@ -31,7 +31,7 @@ pub struct TokenHoldings {
 
 ```
 ### Additional Vault Types
-[TokenMint Vaults](/docs/docs/background/tokens#token-mints) hold information about tokens (instead of the tokens themselves).
+**TokenMint Vaults** hold information about tokens (instead of the tokens themselves).
 
 TokenMints are structured as vaults due to the fact that they are affected by user-level transactions on domains similarly to tokenHoldings vaults.
 

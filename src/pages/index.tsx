@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useColorMode } from '@docusaurus/theme-common';
@@ -10,8 +10,8 @@ import Heading from '@theme/Heading';
 
 
 function HeroSection() {
-  const {siteConfig} = useDocusaurusContext();
-  const {colorMode} = useColorMode();
+  const { siteConfig } = useDocusaurusContext();
+  const { colorMode } = useColorMode();
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -44,11 +44,11 @@ function HeroSection() {
   );
 }
 
-function FeatureItem({title, description, to, icon, type, filename}) {
+function FeatureItem({ title, description, to, icon, type, filename }) {
   const isDownload = type === 'download';
   const isExternal = type === 'external';
   const Wrapper = (isDownload || isExternal) ? 'a' : Link;
-  
+
   const wrapperProps = isDownload ? {
     href: useBaseUrl(to),
     download: filename,
@@ -86,16 +86,16 @@ function FeatureItem({title, description, to, icon, type, filename}) {
 function FeaturesSection() {
   const featuresList = [
     {
-      title: 'Information for developers',
-      description: 'Details on domain setup',
-      to: '/docs/docs/building/delta-sdk',
+      title: 'Information for Developers',
+      description: 'Try out the domain SDK',
+      to: '/docs/docs/build/domain-sdk',
       icon: '🚀',
       type: 'link'
     },
     {
-      title: 'Protocol background',
+      title: 'Learn about delta',
       description: 'Deep dive into the delta protocol',
-      to: '/docs/docs/background',
+      to: '/docs/docs/welcome',
       icon: '🌊',
       type: 'link',
     },
@@ -124,7 +124,7 @@ export default function Home(): ReactNode {
       title="Home"
       description="delta Network Docs"
       noFooter={true}
-      >
+    >
       <main>
         <HeroSection />
         <FeaturesSection />

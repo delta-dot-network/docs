@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -36,6 +36,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          // main docs instance, under tab "docs"
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           // editUrl: null,
@@ -44,6 +45,19 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        // secondary docs instance
+        id: 'resources',
+        path: 'resources',
+        routeBasePath: 'resources',
+        sidebarPath: './sidebar-resources.ts',
+      },
     ],
   ],
 
@@ -59,13 +73,20 @@ const config: Config = {
           type: 'doc',
           docId: 'welcome',
           position: 'left',
-          label: 'for Businesses',
+          label: 'Docs',
         },
         {
           type: 'doc',
-          docId: 'building/delta-sdk',
+          docId: 'glossary',
           position: 'left',
-          label: 'for Builders',
+          label: 'Terminology',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'resources',
+          docsPluginId: 'resources',
+          position: 'left',
+          label: 'Resources',
         },
         {
           href: 'https://x.com/deltadotnetwork',

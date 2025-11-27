@@ -1,11 +1,9 @@
 ---
-title: The delta SDK
-sidebar_label: 'The delta SDK'
-sidebar_position: 1
+title: The Domain SDK
 ---
-# Introducing the delta SDK
+# Introducing the delta Domain SDK
 
-If you’re building a domain from scratch, the delta SDK provides some basic building blocks to get you started with the asset infrastructure. The Executor SDK can be imported as a rust crate, and includes:
+If you’re building a domain from scratch, the delta Domain SDK provides some basic building blocks to get you started with the asset infrastructure. The Domain SDK can be imported as a rust crate, and includes:
 
 - **Cryptographic primitives:** tokens and NFTs, vaults and accounts, public/private keypairs and signatures
 - **End-user operations:** token transfers, token mints and vault creation
