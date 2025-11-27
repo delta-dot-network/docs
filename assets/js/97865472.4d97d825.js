@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdelta_docs_1=self.webpackChunkdelta_docs_1||[]).push([[881],{5577:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"resources"}')}}]);
