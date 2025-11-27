@@ -13,4 +13,4 @@ Test links on your local build first.
 
 **Never develop actively on the github-pages branch.**
 
-Use `
+Use `npm run deploy` to deploy directly to the github pages branch and site.
