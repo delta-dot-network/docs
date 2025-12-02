@@ -1,28 +1,26 @@
 import React, { useEffect } from 'react';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const Redirect: React.FC = () => {
-  const newSiteUrl = 'https://docs.repyhlabs.dev';
-
-  useEffect(() => {
-    // Redirect immediately on component mount
-    window.location.href = newSiteUrl;
-  }, []);
-
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="refresh" content={`0; url=${newSiteUrl}`} />
-        <link rel="canonical" href={newSiteUrl} />
-        <title>Page Moved</title>
-      </head>
-      <body>
-        <p>
-          This site has moved. If you are not redirected automatically,{' '}
-          <a href={newSiteUrl}>click here</a>.
-        </p>
-      </body>
-    </html>
+    <BrowserOnly>
+      {() => {
+        const newSiteUrl = 'https://docs.repyhlabs.dev';
+
+        // Redirect immediately to new site homepage
+        window.location.href = newSiteUrl;
+
+        return (
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <h1>Site Moved</h1>
+            <p>
+              This site has moved. If you are not redirected automatically,{' '}
+              <a href={newSiteUrl}>click here</a>.
+            </p>
+          </div>
+        );
+      }}
+    </BrowserOnly>
   );
 };
 
